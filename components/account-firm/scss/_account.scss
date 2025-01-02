@@ -1,0 +1,33 @@
+.account {
+    padding: 50px 0 50px 80px;
+    width: 100%;
+    @include animationRight(twoRight);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__container {
+        display: flex;
+        height: 100%;
+    }
+
+    &__title {
+        @include adaptSize(32, 20);
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    &__fields {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+        max-width: 900px;
+        margin: 0 auto;
+        margin-bottom: 70px;
+    }
+
+    &__btn {
+        text-align: center;
+    }
+}

@@ -1,0 +1,51 @@
+.auth {
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    @include animationLeft(twoLeft);
+
+    &__title {
+        @include adaptSize(36, 18);
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    &__fields {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-bottom: 70px;
+    }
+
+    &__btn {
+        text-align: center;
+    }
+
+    &__reg {
+        @include adaptSize(16, 12);
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &__reg-btn {
+        text-decoration: underline;
+        margin-left: 5px;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__modal-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+
+        & button {
+            width: 100%;
+        }
+    }
+}

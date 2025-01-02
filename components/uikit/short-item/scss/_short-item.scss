@@ -1,0 +1,103 @@
+.short-item {
+    &__inner {
+        border-radius: 10px;
+        padding: 20px;
+        height: 160px;
+        background-size: cover;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-box-shadow: 0px 0px 28px 4px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 0px 0px 28px 4px rgba(34, 60, 80, 0.2);
+        box-shadow: 0px 0px 28px 4px rgba(34, 60, 80, 0.2);
+        color: $colorThird;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: $zBg;
+            background-color: $colorActive;
+            opacity: .4;
+            border-radius: 10px;
+            transition: opacity .2s linear;
+        }
+
+        &:hover {
+            &::after {
+                opacity: .55;
+            }
+        }
+    }
+
+    &__info {
+        z-index: $zDefault;
+        text-align: center;
+    }
+
+    &__title-container {
+        position: relative;
+        margin-bottom: 15px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -7px;
+            transform: translate(-50%, 100%);
+            z-index: $zDefault;
+            height: 1px;
+            width: 50%;
+            background-color: $colorThird;
+        }
+    }
+
+    &__title {
+        @include adaptSize(18, 14);
+        @include textRestriction(2);
+        font-weight: 500;
+    }
+
+    &__add {
+        font-size: 40px;
+    }
+
+    &__appl {
+        @include adaptSize(14, 12);
+    }
+
+    &__icons {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: $zDefault;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 15px 0;
+    }
+
+    &__btn {
+        &:hover {
+            & .short-item__icon {
+                fill: $colorActive;
+            }
+        }
+    }
+
+    &__subtitle {
+        @include adaptSize(14, 12);
+    }
+
+    &__icon {
+        width: 15px;
+        height: 15px;
+        fill: $colorThird;
+        transition: fill .2s linear;
+    }
+}

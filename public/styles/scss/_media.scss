@@ -1,0 +1,360 @@
+@media(max-width: 1440px) {
+    // Intro
+    .intro {
+        &__inner {
+            background-size: auto 80%;
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+    // Auth
+    .auth {
+        padding: 40px 0;
+
+        &__title {
+            margin-bottom: 40px;
+        }
+
+        &__fields {
+            max-width: 700px;
+            margin-bottom: 60px;
+        }
+    }
+
+    // Grid
+    .grid-4 {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 20px;
+        grid-column-gap: 15px;
+    }
+
+    .grid-3 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    // Short-item
+    .short-item {
+        &__inner {
+            height: 140px;
+        }
+    }
+
+    // Account
+    .account {
+        padding-left: 40px;
+    }
+}
+
+
+@media(max-width: 768px) {
+    // Intro
+    .intro {
+        &__inner {
+            align-items: start;
+            justify-content: center;
+            padding-top: 20px;
+            background-size: auto 70%;
+            background-position: center bottom;
+        }
+
+        &__content {
+            max-width: none;
+            text-align: center;
+        }
+
+        &__title {
+            margin-bottom: 35px;
+
+            &::after {
+                left: 50%;
+                transform: translate(-50%, -100%);
+                width: 240px;
+                bottom: -20px;
+            }
+        }
+    }
+
+    // Grid
+    .grid-4 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    // Auth
+    .auth {
+        &__fields {
+            grid-gap: 25px;
+        }
+    }
+
+    // Account
+    .account {
+        padding: 35px 0 35px 25px;
+
+        &__title {
+            margin-bottom: 35px;
+        }
+
+        &__fields {
+            grid-gap: 25px;
+            margin-bottom: 55px;
+        }
+    }
+
+    // Sidebar
+    .sidebar {
+        width: 180px;
+
+        &__inner {
+            padding-top: 35px;
+        }
+    }
+
+    // Grid
+    .grid-3 {
+        grid-row-gap: 30px;
+        grid-column-gap: 20px;
+    }
+
+    // Full-item
+    .full-item {
+        &__content {
+            margin-bottom: 10px;
+            border-radius: 5px;
+            padding: 20px 15px;
+        }
+
+        &__container {
+            &::after {
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+@media(max-width: 540px) {
+    // Header
+    .header {
+        &__logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        &__company {
+            &::after,
+            &::before {
+                height: 1px;
+                width: 50px;
+            }
+        }
+
+        &__profile {
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+    // Account
+    .account {
+        padding-left: 0;
+
+        &__title {
+            padding: 0 50px;
+        }
+
+        &__fields {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    // Sidebar
+    .sidebar {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: calc($zHeader - 1);
+        width: 100%;
+        height: 100vh;
+
+        &__inner {
+            padding-right: 0;
+            padding-top: 60px;
+        }
+
+        &__item-container {
+            width: 100%;
+            text-align: center;
+            display: block;
+        }
+
+        &__item {
+            font-size: 18px;
+        }
+    }
+
+    // Burger
+    .burger {
+        display: flex;
+    }
+}
+
+@media(max-width: 425px) {
+    // Header
+    .header {
+        height: 70px;
+
+        &__logo {
+            width: 30px;
+            height: 30px;
+        }
+
+        &__company {
+            &::after {
+                right: -10px;
+                width: 30px;
+            }
+
+            &::before {
+                left: -10px;
+                width: 30px;
+            }
+        }
+
+        &__profile {
+            width: 15px;
+            height: 15px;
+            margin-right: 6px;
+        }
+    }
+
+    // Intro
+    .intro {
+        &__title {
+            &::after {
+                width: 140px;
+            }
+        }
+    }
+
+    // Auth
+    .auth {
+        &__fields {
+            grid-template-columns: 1fr;
+            margin-bottom: 40px;
+        }
+
+        &__title {
+            margin-bottom: 25px;
+        }
+
+        &__reg {
+            margin-bottom: 20px;
+        }
+    }
+
+    // Btn
+    .btn {
+        padding: 10px 15px;
+        min-width: 145px;
+    }
+
+    // Burger
+    .burger {
+        width: 40px;
+        height: 40px;
+
+        &__item {
+            height: 1.5px;
+
+            &::after {
+                height: 1.5px;
+                bottom: -6px;
+            }
+
+            &::before {
+                height: 1.5px;
+                top: -6px;
+            }
+        }
+    }
+
+    // Sidebar
+    .sidebar {
+        &__inner {
+            padding-top: 50px;
+        }
+
+        &__item {
+            font-size: 16px;
+        }
+    }
+
+    // Account
+    .account {
+        &__title {
+            padding: 0 30px;
+        }
+    }
+
+    // Create-resume
+    .create-resume {
+        &__form {
+            & .account__fields {
+                grid-template-areas: none;
+            }
+
+            & .form__field-container:nth-child(n) {
+                grid-area: auto;
+            }
+        }
+    }
+
+    // Form
+    .form {
+        &__field {
+            &--textarea {
+                height: 150px;
+            }
+        }
+    }
+
+    // Grid
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    // Full-item
+    .full-item {
+        &__name {
+            font-size: 18px;
+        }
+
+        &__info {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    // Grid
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    // Short-item
+    .short-item {
+        &__inner {
+            height: 180px;
+        }
+
+        &__title {
+            font-size: 16px;
+        }
+
+        &__subtitle {
+            font-size: 14px;
+        }
+    }
+}

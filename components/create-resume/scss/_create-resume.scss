@@ -1,0 +1,30 @@
+.create-resume {
+    &__form {
+        & .account__fields {
+            grid-template-areas: 
+                "vacancy busyness"
+                "experience description"
+                "salary description";
+        }
+    
+        & .form__field-container {
+            &:nth-child(1) {
+                grid-area: vacancy;
+            }
+            &:nth-child(2) {
+                grid-area: busyness;
+            }
+            &:nth-child(3) {
+                grid-area: experience;
+            }
+            &:nth-child(4) {
+                grid-area: salary;
+            }
+            &:nth-child(5) {
+                grid-area: description;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

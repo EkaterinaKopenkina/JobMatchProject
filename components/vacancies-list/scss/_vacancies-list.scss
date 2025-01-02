@@ -1,0 +1,9 @@
+.vacancies-list {
+    & .full-item__content {
+        background-image: url('../img/vacancy_bg.webp'), url('../img/vacancy_bg.jpg');
+    }
+
+    & .full-item__btns {
+        display: flex;
+    }
+}

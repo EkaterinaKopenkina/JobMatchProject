@@ -1,0 +1,59 @@
+.burger {
+    background-color: $colorBgSecondary;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    z-index: $zHeader;
+    width: 50px;
+    height: 50px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+        & .burger__item {
+            background: none;
+
+            &::before {
+                transform-origin: left top;
+                transform: rotate(47deg) translateX(-1px);
+                left: 21%;
+            }
+
+            &::after {
+                transform-origin: left bottom;
+                transform: rotate(-45deg) translateX(-2px);
+                left: 21%;
+            }
+        }
+    }
+
+    &__item {
+        width: 50%;
+        height: 2px;
+        background-color: $colorBgPrimary;
+        position: relative;
+        @include animationScale(oneScale);
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: $colorBgPrimary;
+            z-index: $zHeader;
+            left: 0;
+            transition: transform .2s linear;
+        }
+
+        &::before {
+            top: -7px;
+        }
+
+        &::after {
+            bottom: -7px;
+        }
+    }
+}

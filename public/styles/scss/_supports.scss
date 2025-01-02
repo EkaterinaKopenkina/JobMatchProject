@@ -1,0 +1,65 @@
+// Container
+.container {
+	width: 100%;
+	max-width: 1390px;
+	margin: 0 auto;
+	padding:  0 15px;
+	position: relative;
+}
+
+// Page
+.page {
+	overflow: hidden;
+	width: 100%;
+	display: grid;
+	@include calcHeight();
+}
+
+// Btn
+.btn {
+	@include adaptSize(18, 14);
+	font-weight: 600;
+	padding: 15px 25px;
+	border: 2px solid $colorPrimary;
+	color: $colorPrimary;
+	border-radius: 5px;
+	min-width: 200px;
+	transition: all .2s linear;
+
+	&--small {
+		padding: 10px 15px;
+		min-width: auto;
+		font-weight: 500;
+	}
+
+	&:hover {	
+		background-color: $colorBgSecondary;
+		color: $colorSecondary;
+		border: 2px solid $colorBgSecondary;
+	}
+}
+
+// Rating
+.rating {
+	&__star {
+		width: 15px;
+        height: 15px;
+        fill: $colorStar;
+        margin-left: 2px;
+	}
+}
+
+// Grid
+.grid-4 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-row-gap: 30px;
+    grid-column-gap: 20px;
+}
+
+.grid-3 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-row-gap: 40px;
+    grid-column-gap: 30px;
+}

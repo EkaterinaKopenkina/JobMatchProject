@@ -1,0 +1,151 @@
+// Import
+@import "vars";
+@import "mixins";
+@import "supports";
+@import "auth";
+@import "form";
+@import "modal";
+@import "animation";
+@import "../../../components/layout/header/scss/header";
+@import "../../../components/intro/scss/intro";
+@import "../../../components/layout/sidebar/scss/sidebar";
+@import "../../../components/account-firm/scss/account";
+@import "../../../components/vacancies/scss/vacancies";
+@import "../../../components/vacancy/scss/vacancy";
+@import "../../../components/vacancies-list/scss/vacancies-list";
+@import "../../../components/resume/scss/resume";
+@import "../../../components/create-resume/scss/create-resume";
+@import "../../../components/uikit/short-item/scss/short-item";
+@import "../../../components/uikit/full-item/scss/full-item";
+@import "../../../components/burger/scss/burger";
+@import "media";
+
+// Fonts
+@font-face {
+    font-family: 'Roboto';
+    src: 
+        url('../fonts/Roboto.woff2') format('woff2'), 
+        url('../fonts/Roboto.woff') format('woff'), 
+        url('../fonts/Roboto.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: 
+        url('../fonts/Robotomedium.woff2') format('woff2'), 
+        url('../fonts/Robotomedium.woff') format('woff'), 
+        url('../fonts/Robotomedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: 
+        url('../fonts/Robotobold.woff2') format('woff2'), 
+        url('../fonts/Robotobold.woff') format('woff'), 
+        url('../fonts/Robotobold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+// Style
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $colorBgPrimary;
+    font-size: 16px;
+    color: $colorPrimary;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
+    &.no-scroll {
+		overflow: hidden;
+	}
+}
+
+:focus, :active {
+    outline: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-weight: 400;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+
+    &:visited {
+        text-decoration: none;
+    }
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+button {
+	background: none;
+	border: none;
+	font-size: inherit;
+	cursor: pointer;
+	font-family: inherit;
+	font-weight: inherit;
+	color: inherit;
+
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+}
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+input[type="number"] { 
+    -moz-appearance: textfield; 
+}
+
+input,
+textarea {
+	font-family: inherit;
+	border: none;
+
+    &::-ms-clear {
+        display: none;
+    }
+
+	&:focus {
+		outline: none;
+	}
+
+	&:hover {
+		outline: none;
+	}
+}
+
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
