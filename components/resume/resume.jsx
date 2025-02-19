@@ -6,7 +6,7 @@ import UiShortAdd from "../uikit/short-item/ui/ui-short-add"
 import UiRating from "../uikit/ui-rating";
 import { RESUME_DATA } from "./model/constants";
 
-const Resume = () => {
+const Resume = ({router}) => {
     return (
         <UiAccountLayout title="Мои резюме">
             <UiGrid4 className="resume">
@@ -19,6 +19,7 @@ const Resume = () => {
                         title={resume.title}
                         close={<UiShortClose />}
                         rating={<UiRating rating={rating} />}
+                        router={router}
                         />
                 })}
                 <UiShortAdd href="create-resume"/>

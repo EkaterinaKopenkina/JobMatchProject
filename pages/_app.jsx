@@ -32,7 +32,7 @@ const App = ({ Component, pageProps }) => {
             <div className="container">
               <div className="account__container">
                 { sidebar }
-                <Component {...pageProps} />
+                <Component router={router} {...pageProps} />
               </div>
             </div>
           </main>

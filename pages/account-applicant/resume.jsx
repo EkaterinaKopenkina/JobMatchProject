@@ -1,7 +1,7 @@
 import Resume from "../../components/resume/resume";
 
-const ResumePage = () => {
-    return <Resume />
+const ResumePage = ({router}) => {
+    return <Resume router={router} />
 }
 
 export default ResumePage;

@@ -15,7 +15,7 @@ const AccountFirm = () => {
                 //validate={}
             > 
                 {(values) => (
-                    <Form clasasName="form">
+                    <Form className="form">
                         <UiAccountForm
                             fields={accountFields}
                             btn={<UiButton text="Сохранить" values={values} />}

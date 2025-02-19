@@ -1,5 +1,5 @@
 export const buttons = {
-    "Принять": <button className="btn btn--small">Принять</button>,
-    "Отклонить": <button className="btn btn--small">Отклонить</button>,
-    "Резюме": <button className="btn">Подать резюме</button>
+    "Принять": <button key={1} className="btn btn--small">Принять</button>,
+    "Отклонить": <button key={2} className="btn btn--small">Отклонить</button>,
+    "Резюме": <button key={3} className="btn">Подать резюме</button>
 }

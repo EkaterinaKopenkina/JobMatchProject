@@ -22,7 +22,7 @@ export const regFields = [
         placeholder="Введите адрес"
         label="Адрес:"
     />,
-    <UiField key={3}
+    <UiField key={4}
         type="password"
         id="reg-firm_pass"
         name="password"

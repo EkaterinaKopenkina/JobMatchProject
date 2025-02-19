@@ -14,10 +14,10 @@ const Vacancy = () => {
                     return <UiFullItem key={appl.id}
                         name={appl.name}
                         info={[
-                            <UiFullInfo key={1} title="Опыт работы" value={appl.experience} isDescription={false}/>,
-                            <UiFullInfo key={2} title="Оклад" value={`от ${appl.salary_from} до ${appl.salary_to}`} isDescription={false} />,
-                            <UiFullInfo key={3} title="Занятость" value={appl.busyness} isDescription={false} />,
-                            <UiFullInfo key={4} title="Описание" value={appl.description} isDescription={true} />,
+                            <UiFullInfo key={Number(`${appl.id}1`)} title="Опыт работы" value={appl.experience} isDescription={false}/>,
+                            <UiFullInfo key={Number(`${appl.id}2`)} title="Оклад" value={`от ${appl.salary_from} до ${appl.salary_to}`} isDescription={false} />,
+                            <UiFullInfo key={Number(`${appl.id}3`)} title="Занятость" value={appl.busyness} isDescription={false} />,
+                            <UiFullInfo key={Number(`${appl.id}4`)} title="Описание" value={appl.description} isDescription={true} />,
                         ]}
                         phone={appl.phone}
                         rating={<UiRating rating={rating} />} 

@@ -6,7 +6,7 @@ import UiShortEdit from "../uikit/short-item/ui/ui-short-edit"
 import UiShortClose from "../uikit/short-item/ui/ui-short-close"
 import UiShortAdd from "../uikit/short-item/ui/ui-short-add"
 
-const Vacancies = () => {
+const Vacancies = ({router}) => {
     return (
         <UiAccountLayout title="Мои вакансии">
             <UiGrid4 className="vacancies">
@@ -18,6 +18,7 @@ const Vacancies = () => {
                         subtitle={`Заявки: ${vacancy.applications}`}
                         edit={<UiShortEdit href={`create-vacancy/${vacancy.id}`}/>}
                         close={<UiShortClose />}
+                        router={router}
                     />
                 )}
                 <UiShortAdd href="create-vacancy" className='vacancies__item'/>
